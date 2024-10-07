@@ -1,0 +1,159 @@
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('assets/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.5s ease;
+}
+
+/* Main container styling */
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Title styling */
+h1 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 25px;
+    color: #333;
+    transition: color 0.5s ease;
+}
+
+/* Input field container styling */
+.input-group {
+    margin-bottom: 20px;
+}
+
+/* Label styling */
+label {
+    font-weight: bold;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    transition: color 0.5s ease;
+}
+
+/* Input field styling */
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+}
+
+/* Focus effect for input fields */
+input:focus {
+    outline: none;
+    border-color: #4a90e2;
+    background-color: #fff;
+}
+
+/* Responsive layout for mobile devices */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    input {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+/* Theme toggles (sun and moon) */
+.theme-toggle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 325px;
+}
+
+/* Sun and Moon Emoji Styling */
+.sun, .moon {
+    font-size: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 0, 0.8)); /* Glowing effect for both */
+}
+
+.moon {
+    filter: drop-shadow(0 0 10px rgba(74, 144, 226, 0.8)); /* Glowing effect for moon */
+}
+
+.sun:hover, .moon:hover {
+    transform: scale(1.2); /* Hover effect */
+}
+
+/* Credits Icon */
+.credits {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Credits Message Box */
+.credits-message {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.credits-message p {
+    margin: 0;
+}
+
+.close {
+    cursor: pointer;
+    font-size: 18px;
+    float: right;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #2d2d2d;
+}
+
+.container.dark-mode {
+    background-color: #444;
+}
+
+h1.dark-mode, label.dark-mode, input.dark-mode {
+    color: #ddd;
+}
+
+input.dark-mode {
+    background-color: #666;
+    border-color: #888;
+}

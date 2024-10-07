@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number System Decoder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="main-container">
+        <div class="theme-toggle">
+            <div class="sun" id="sun" onclick="switchToLightTheme()">🌞</div>
+            <div class="moon" id="moon" onclick="switchToDarkTheme()">🌜</div>
+        </div>
+
+        <h1>Number System Decoder</h1>
+
+        <div class="input-group">
+            <label for="binary">Binary</label>
+            <input type="text" id="binary" placeholder="Enter binary number" oninput="convertFromBinary()">
+        </div>
+
+        <div class="input-group">
+            <label for="denary">Denary (Decimal)</label>
+            <input type="text" id="denary" placeholder="Enter decimal number" oninput="convertFromDenary()">
+        </div>
+
+        <div class="input-group">
+            <label for="penary">Penary (Base-5)</label>
+            <input type="text" id="penary" placeholder="Enter penary number" oninput="convertFromPenary()">
+        </div>
+
+        <div class="input-group">
+            <label for="hexadecimal">Hexadecimal</label>
+            <input type="text" id="hexadecimal" placeholder="Enter hexadecimal number" oninput="convertFromHexadecimal()">
+        </div>
+
+        <!-- Credits Icon -->
+        <div class="credits" onclick="showCredits()">
+            ℹ️
+        </div>
+    </div>
+
+    <!-- Credits Message Box -->
+    <div class="credits-message" id="credits-message">
+        <span class="close" onclick="hideCredits()">✖️</span>
+        <p>Number System Decoder by iDucky [IR]. All rights reserved.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
