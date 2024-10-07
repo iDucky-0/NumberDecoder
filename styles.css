@@ -7,6 +7,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column; /* Ensures containers are stacked vertically */
     font-family: Arial, sans-serif;
 }
 
@@ -16,7 +17,8 @@ body {
     padding: 30px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     text-align: center;
-    width: 350px; /* Increased width for better balance */
+    width: 350px; /* Consistent width */
+    margin-bottom: 20px; /* Space between decoder and encoder sections */
 }
 
 h1 {
@@ -29,19 +31,19 @@ input[type="text"], select {
     margin: 10px 0;
     border-radius: 10px;
     border: 1px solid #ccc;
-    font-size: 16px; /* Larger font for readability */
+    font-size: 16px;
 }
 
 button {
     background-color: #4CAF50;
     color: white;
-    padding: 12px; /* Same padding for even button size */
+    padding: 12px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
-    width: 100%; /* Full width for button */
-    font-size: 16px; /* Consistent font size */
+    width: 100%;
+    font-size: 16px;
 }
 
 button:hover {
@@ -51,5 +53,5 @@ button:hover {
 h2 {
     margin-top: 20px;
     color: #333;
-    font-size: 18px; /* Slightly larger font size for results */
+    font-size: 18px;
 }
