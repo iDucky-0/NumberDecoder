@@ -1,159 +1,55 @@
-/* General body styling */
 body {
-    font-family: 'Arial', sans-serif;
-    background: url('background.jpg') no-repeat center center fixed;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('background.jpg');
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-    transition: background-color 0.5s ease;
+    font-family: Arial, sans-serif;
 }
 
-/* Main container styling */
 .container {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-    position: relative;
-    transition: background-color 0.5s ease, color 0.5s ease;
-}
-
-/* Title styling */
-h1 {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     text-align: center;
-    font-size: 22px;
-    margin-bottom: 25px;
-    color: #333;
-    transition: color 0.5s ease;
+    width: 350px; /* Increased width for better balance */
 }
 
-/* Input field container styling */
-.input-group {
+h1 {
     margin-bottom: 20px;
 }
 
-/* Label styling */
-label {
-    font-weight: bold;
-    font-size: 14px;
-    display: block;
-    margin-bottom: 5px;
-    color: #555;
-    transition: color 0.5s ease;
-}
-
-/* Input field styling */
-input {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-sizing: border-box;
-    background-color: #f8f9fa;
-    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
-}
-
-/* Focus effect for input fields */
-input:focus {
-    outline: none;
-    border-color: #4a90e2;
-    background-color: #fff;
-}
-
-/* Responsive layout for mobile devices */
-@media (max-width: 480px) {
-    .container {
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 20px;
-    }
-
-    input {
-        font-size: 14px;
-        padding: 8px;
-    }
-}
-
-/* Theme toggles (sun and moon) */
-.theme-toggle {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 325px;
-}
-
-/* Sun and Moon Emoji Styling */
-.sun, .moon {
-    font-size: 30px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    filter: drop-shadow(0 0 10px rgba(255, 255, 0, 0.8)); /* Glowing effect for both */
-}
-
-.moon {
-    filter: drop-shadow(0 0 10px rgba(74, 144, 226, 0.8)); /* Glowing effect for moon */
-}
-
-.sun:hover, .moon:hover {
-    transform: scale(1.2); /* Hover effect */
-}
-
-/* Credits Icon */
-.credits {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-/* Credits Message Box */
-.credits-message {
-    display: none; /* Hidden by default */
-    position: fixed;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 255);
-    padding: 20px;
+input[type="text"], select {
+    width: calc(100% - 20px); /* Full width minus padding */
+    padding: 12px;
+    margin: 10px 0;
     border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
+    border: 1px solid #ccc;
+    font-size: 16px; /* Larger font for readability */
 }
 
-.credits-message p {
-    margin: 0;
-}
-
-.close {
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px; /* Same padding for even button size */
+    border: none;
+    border-radius: 10px;
     cursor: pointer;
-    font-size: 18px;
-    float: right;
+    transition: background-color 0.3s;
+    width: 100%; /* Full width for button */
+    font-size: 16px; /* Consistent font size */
 }
 
-/* Dark mode styles */
-body.dark-mode {
-    background-color: #2d2d2d;
+button:hover {
+    background-color: #45a049;
 }
 
-.container.dark-mode {
-    background-color: #444;
-}
-
-h1.dark-mode, label.dark-mode, input.dark-mode {
-    color: #ddd;
-}
-
-input.dark-mode {
-    background-color: #666;
-    border-color: #888;
+h2 {
+    margin-top: 20px;
+    color: #333;
+    font-size: 18px; /* Slightly larger font size for results */
 }
