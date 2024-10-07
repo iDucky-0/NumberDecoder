@@ -19,3 +19,23 @@ function decodeNumber() {
         document.getElementById("result").innerText = "Invalid input!";
     }
 }
+
+function encodeNumber() {
+    const decimalInput = document.getElementById("decimalInput").value;
+    const base = parseInt(document.getElementById("encoderBaseSelect").value);
+    let result;
+
+    try {
+        if (base === 2) {
+            result = parseInt(decimalInput).toString(2);
+        } else if (base === 12) {
+            result = parseInt(decimalInput).toString(12);
+        } else if (base === 16) {
+            result = parseInt(decimalInput).toString(16);
+        }
+
+        document.getElementById("encodeResult").innerText = `Encoded: ${result.toUpperCase()}`;
+    } catch (error) {
+        document.getElementById("encodeResult").innerText = "Invalid input!";
+    }
+}
